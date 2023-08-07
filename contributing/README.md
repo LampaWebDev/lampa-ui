@@ -32,7 +32,7 @@ Describe the documentation of implemented component in ```*root*/docs/src/conten
 
 ## Recommended editor plugins
 
-- (Plugins for ```*.astro``` syntax highlighting)[https://docs.astro.build/en/editor-setup/];
-- (eslint)[https://eslint.org/docs/latest/use/integrations];
-- (stylelint)[https://stylelint.io/user-guide/customize/#using-stylelint];
-- (prettier)[https://prettier.io/docs/en/editors];
+- [Plugins for ```*.astro``` syntax highlighting](https://docs.astro.build/en/editor-setup/);
+- [eslint](https://eslint.org/docs/latest/use/integrations);
+- [stylelint](https://stylelint.io/user-guide/customize/#using-stylelint);
+- [prettier](https://prettier.io/docs/en/editors);
