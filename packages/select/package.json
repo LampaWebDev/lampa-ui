@@ -1,0 +1,50 @@
+{
+	"name": "@lampa-ui/select",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"type": "module",
+	"files": [
+		"dist"
+	],
+	"exports": {
+		"import": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		},
+		"require": "./dist/index.cjs"
+	},
+	"scripts": {
+		"build": "npx tsup",
+		"test": "npx vitest run && npx tsc --project ./tsconfig.build.json --skipLibCheck --outDir --noEmit",
+		"clean": "npx rimraf dist"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/LampaWebDev/lampa-ui.git",
+		"directory": "packages/select"
+	},
+	"keywords": [
+		"ui-kit",
+		"lampa",
+		"react-ui-kit",
+		"react"
+	],
+	"author": "Dmytro Nesteruk <dmytro.nesteruk.13@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/LampaWebDev/lampa-ui/issues"
+	},
+	"homepage": "https://github.com/LampaWebDev/lampa-ui#readme",
+	"engines": {
+		"node": ">=18.0.0",
+		"npm": ">=8.6.0"
+	},
+	"engineStrict": true,
+	"peerDependencies": {
+		"react": ">=17.0.0",
+		"react-dom": ">=17.0.0"
+	}
+}

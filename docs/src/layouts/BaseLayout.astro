@@ -1,0 +1,24 @@
+---
+import { Sidebar } from '@components/layout';
+
+const { frontmatter } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<title>{frontmatter.title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=DM+Serif+Display&family=Mulish:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="prose">
+		<Sidebar />
+		<h1>{frontmatter.title}</h1>
+		<h2>{frontmatter.title}</h2>
+		<h3>{frontmatter.title}</h3>
+		<slot />
+	</body>
+</html>

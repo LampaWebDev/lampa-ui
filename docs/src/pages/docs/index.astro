@@ -1,0 +1,9 @@
+---
+import { getCollection } from 'astro:content';
+
+const docs = await getCollection('docs');
+---
+
+<h2>You might also like:</h2>
+
+{docs.map((doc) => <a href={`/docs/${doc.slug}`}>{doc.data.title}</a>)}

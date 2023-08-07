@@ -1,0 +1,136 @@
+{
+	"name": "lampa-ui",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"type": "module",
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"exports": {
+		"import": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		},
+		"require": "./dist/index.cjs"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/LampaWebDev/lampa-ui.git"
+	},
+	"keywords": [
+		"ui-kit",
+		"lampa",
+		"react-ui-kit",
+		"react"
+	],
+	"author": "Dmytro Nesteruk <dmytro.nesteruk.13@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/LampaWebDev/lampa-ui/issues"
+	},
+	"homepage": "https://github.com/LampaWebDev/lampa-ui#readme",
+	"engines": {
+		"node": ">=18.0.0",
+		"npm": ">=8.6.0"
+	},
+	"engineStrict": true,
+	"workspaces": [
+		"packages/*",
+		"docs/*"
+	],
+	"scripts": {
+		"dev": "storybook dev -p 5000",
+		"test": "npx lerna run test",
+		"build:packages": "npx lerna run build",
+		"test:watch": "vitest",
+		"test:ui": "vitest --ui",
+		"check:code": "npx eslint ./",
+		"check:code:stage": "npx eslint --config ./.eslintrc.stage.json ./",
+		"check:code-style": "npx prettier --config ./.prettierrc.cjs --check \"./**/*.{ts,tsx,js,jsx,json,html,mdx,css,scss}\"",
+		"check:styles": "npx stylelint ./**/*.{css,scss,sass,astro}",
+		"check:types": "npx tsc --noEmit --skipLibCheck",
+		"prepublishOnly": "npm run build",
+		"prepare": "husky install"
+	},
+	"lint-staged": {
+		"./**/*.{ts,tsx}": [
+			"bash -c 'npm run check:code:stage'",
+			"bash -c 'npm run check:types'"
+		],
+		"./**/*.{ts,tsx,js,jsx,json,html,mdx,css,scss}": "bash -c 'npm run check:code-style'",
+		"./**/*.{test,spec}.{ts,tsx}": "bash -c 'npm run test'"
+	},
+	"config": {
+		"commit-message-validator": {
+			"_comment": "pattern can be Regex string or array of Regex string",
+			"pattern": "^(chore|docs|feature|bugfix|hotfix|refactor|revert|style|improve)/[\\w-]{1,30}:s?.{1,150}$",
+			"errorMessage": "Invalid commit message format. It should contain (chore|docs|feature|bugfix|hotfix|refactor|revert|style|improve)/(scope): message"
+		}
+	},
+	"devDependencies": {
+		"@storybook/addon-essentials": "^7.1.1",
+		"@storybook/addon-interactions": "^7.1.1",
+		"@storybook/addon-links": "^7.1.1",
+		"@storybook/addon-onboarding": "^1.0.8",
+		"@storybook/blocks": "^7.1.1",
+		"@storybook/react": "^7.1.1",
+		"@storybook/react-vite": "^7.1.1",
+		"@storybook/testing-library": "^0.2.0",
+		"@testing-library/jest-dom": "^5.17.0",
+		"@testing-library/react": "^14.0.0",
+		"@testing-library/user-event": "^14.4.3",
+		"@trivago/prettier-plugin-sort-imports": "^4.2.0",
+		"@types/node": "^20.4.5",
+		"@types/react": "^18.2.16",
+		"@types/react-dom": "^18.2.7",
+		"@typescript-eslint/eslint-plugin": "^6.2.0",
+		"@typescript-eslint/parser": "^6.2.0",
+		"@vitejs/plugin-react": "^4.0.3",
+		"@vitest/ui": "^0.33.0",
+		"autoprefixer": "^10.4.14",
+		"commit-message-validator": "^1.0.2",
+		"eslint": "^8.2.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-airbnb-typescript": "^17.1.0",
+		"eslint-config-prettier": "^8.9.0",
+		"eslint-plugin-astro": "^0.28.0",
+		"eslint-plugin-import": "^2.25.3",
+		"eslint-plugin-jsx-a11y": "^6.5.1",
+		"eslint-plugin-react": "^7.28.0",
+		"eslint-plugin-react-hooks": "^4.3.0",
+		"eslint-plugin-storybook": "^0.6.13",
+		"husky": "^8.0.3",
+		"jsdom": "^22.1.0",
+		"lerna": "^7.1.4",
+		"lint-staged": "^13.2.3",
+		"postcss": "^8.4.27",
+		"prettier": "^3.0.0",
+		"prettier-plugin-astro": "^0.11.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"sass": "^1.64.1",
+		"storybook": "^7.1.1",
+		"stylelint": "^15.5.0",
+		"stylelint-config-recess-order": "^4.3.0",
+		"stylelint-config-recommended-scss": "^12.0.0",
+		"tailwindcss": "^3.3.3",
+		"terser": "^5.19.2",
+		"ts-node": "^10.9.1",
+		"tsup": "^7.1.0",
+		"typescript": "^5.1.6",
+		"vite": "^4.4.7",
+		"vite-tsconfig-paths": "^4.2.0",
+		"vitest": "^0.33.0"
+	},
+	"peerDependencies": {
+		"react": ">=17.0.0",
+		"react-dom": ">=17.0.0"
+	},
+	"dependencies": {
+		"prop-types": "^15.8.1"
+	}
+}

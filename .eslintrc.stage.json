@@ -1,0 +1,22 @@
+{
+	"$schema": "https://json.schemastore.org/eslintrc.json",
+	"extends": ["./.eslintrc.json"],
+	"overrides": [
+		{
+			"files": ["./**/*.config.ts", "./**/*.stories.{ts,tsx,js,jsx,mdx}"],
+			"rules": {
+				"import/no-default-export": "off"
+			}
+		},
+		{
+			"files": ["./scripts/**/*", "./utils/**/*"],
+			"rules": {
+				"no-console": "off"
+			}
+		}
+	],
+	"rules": {
+		"no-console": "error",
+		"no-debugger": "error"
+	}
+}

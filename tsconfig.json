@@ -1,0 +1,22 @@
+{
+	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@utils": ["./utils"]
+		}
+	},
+	"include": [
+		"setup-vitest.ts",
+		"packages",
+		"scripts",
+		"utils",
+		"docs",
+		"vite.config.ts",
+		"vitest.workspace.ts",
+		"./.storybook/**/*",
+		"./tailwind.config.js",
+		"./postcss.config.js"
+	],
+	"references": [{ "path": "./tsconfig.node.json" }]
+}

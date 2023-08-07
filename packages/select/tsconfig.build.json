@@ -1,0 +1,14 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"baseUrl": "."
+	},
+	"include": ["src", "./tsup.config.ts"],
+	"exclude": [
+		"./dist",
+		"**/*.{story,stories,styled}.tsx",
+		"**/*.test.tsx",
+		"**/*.test.ts",
+		"src/demos.ts"
+	]
+}

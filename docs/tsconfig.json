@@ -1,0 +1,14 @@
+{
+	"extends": "astro/tsconfigs/base",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@utils/*": ["../utils/*"],
+			"@components/*": ["./src/components/*"],
+			"@layouts/*": ["./src/layouts/*"]
+		},
+		"jsx": "react-jsx",
+		"jsxImportSource": "react"
+	},
+	"include": ["src", "astro.config.ts", "tailwind.config.ts", "tailwind.safelist.ts"]
+}

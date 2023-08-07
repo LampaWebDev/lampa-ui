@@ -1,0 +1,18 @@
+.DS_Store
+node_modules
+/build
+/dist
+/package
+/packages/**/dist
+.env
+.env.*
+!.env.example
+
+*.d.ts
+
+!.storybook
+
+# Ignore files for PNPM, NPM and YARN
+pnpm-lock.yaml
+package-lock.json
+yarn.lock

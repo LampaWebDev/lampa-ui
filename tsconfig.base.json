@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"allowJs": false,
+		"skipLibCheck": true,
+		"noEmitOnError": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"noUncheckedIndexedAccess": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"stripInternal": true,
+		"strict": true,
+		"jsx": "react-jsx",
+		"types": ["vitest/globals"],
+		"baseUrl": "."
+	},
+	"exclude": ["node_modules", "*.d.ts"],
+	"references": [{ "path": "./tsconfig.node.json" }]
+}
