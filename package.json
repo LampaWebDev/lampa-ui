@@ -54,7 +54,7 @@
 		"check:code-style": "npx prettier --config ./.prettierrc.cjs --check \"./**/*.{ts,tsx,js,jsx,json,html,mdx,css,scss}\"",
 		"check:styles": "npx stylelint ./**/*.{css,scss}",
 		"check:types": "npx tsc --noEmit --skipLibCheck",
-		"prepublishOnly": "npm run build",
+		"prepublishOnly": "npm run build:packages",
 		"prepare": "husky install"
 	},
 	"lint-staged": {
