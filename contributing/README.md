@@ -20,7 +20,7 @@ Every part of component must be separate to own file and collect in ```YourCompo
 
 For every component you must write tests, stories and demos.
 
-> NOTE: files with tests, stories and demos must be added to ```exlude``` option of
+> NOTE: files with tests, stories and demos must be added to ```exclude``` option of
 > ```tsconfig.build.json```
 
 ## Documentation
