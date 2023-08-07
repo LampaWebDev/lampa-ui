@@ -7,3 +7,8 @@
 *.svg
 *.cjs
 *.mjs
+
+/dist
+
+/packages/**/dist
+/docs/**/dist
