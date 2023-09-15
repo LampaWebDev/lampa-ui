@@ -1,0 +1,11 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@lampa-ui/*": ["../../packages/*/dist/index.js"]
+		}
+	},
+	"include": ["src", "tsup.config.ts", "vitest.config.ts"],
+	"exclude": ["./dist", "node_modules"]
+}
